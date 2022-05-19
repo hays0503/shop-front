@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+.title{
+    margin: '1rem auto';
+    font-family: 'Amatic SC', cursive;
+    font-size: larger;
+   }
+
+.vr {
+    width: 10px;
+    height: auto;
+    color: inherit;
+}
+
