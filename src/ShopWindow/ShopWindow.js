@@ -94,8 +94,8 @@ const itemShop = [
 export default class ShopWindow extends Component {
   render() {
     return (
-      <CardGroup className="d-flex justify-content-center">
-        <Row xxs={1} xs={1} md={2} lg={3} xl={4} xxl={5} className="g-xxl-5">
+      <CardGroup>
+        <Row style={{ margin: '2rem' }} xs={1} md={2} lg={3} xl={4} xxl={5}>
           {this.renderShopWindow()}
         </Row>
       </CardGroup>
@@ -172,7 +172,7 @@ export default class ShopWindow extends Component {
   renderShopWindow() {
     return itemShop.map(item => {
       return (
-        <Col key={item.idItem}>
+        <Col style={{ marginBottom: '0.2rem' }} key={item.idItem}>
           <Card style={{ width: '16rem', height: '38rem' }}>
             <Card.Img
               variant="top"
