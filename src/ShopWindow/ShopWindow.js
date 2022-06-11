@@ -94,8 +94,8 @@ const itemShop = [
 export default class ShopWindow extends Component {
   render() {
     return (
-      <CardGroup>
-        <Row xs={2} md={2} lg={3} xl={4} xxl={5} className="g-xxl-5">
+      <CardGroup className="d-flex justify-content-center">
+        <Row xxs={1} xs={1} md={2} lg={3} xl={4} xxl={5} className="g-xxl-5">
           {this.renderShopWindow()}
         </Row>
       </CardGroup>
