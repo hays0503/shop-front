@@ -7,6 +7,7 @@ import ShopWindow from './ShopWindow/ShopWindow'
 import NavigationBar from './NavigarionBar/NavigationBar'
 import Categories from './CategoriesBar/CategoriesBar'
 import ItemViewer from './ItemViewer/ItemViewer'
+import ThemeProvider from 'react-bootstrap/ThemeProvider'
 import React, { useState } from 'react'
 
 function App() {
@@ -18,21 +19,25 @@ function App() {
 
   return (
     <div className="App">
-      <Container fluid>
-        <NavigationBar handleShowCategories={toggleShowCategories} />
-
-        <Row>
-          {isShowCategories ? (
-            <Col className="col-2">
-              <Categories />
+      <ThemeProvider breakpoints={['xxxl', 'xxl', 'xl', 'lg', 'md', 'sm', 'xs', 'xxs']}>
+        <Container fluid>
+          
+          <Row>
+            <NavigationBar handleShowCategories={toggleShowCategories} />
+          </Row>
+          <Row>
+            {isShowCategories ? (
+              <Col className="col-2">
+                <Categories />
+              </Col>
+            ) : null}
+            <Col className="col">
+              <ItemViewer style={{ zIndex: 0 }} />
+              {/* <ShopWindow /> */}
             </Col>
-          ) : null}
-          <Col className="col">
-            <ItemViewer style={{ zIndex: 0 }} />
-            {/* <ShopWindow /> */}
-          </Col>
-        </Row>
-      </Container>
+          </Row>
+        </Container></ThemeProvider>
+      
     </div>
   )
 }

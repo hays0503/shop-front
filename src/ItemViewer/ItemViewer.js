@@ -4,6 +4,7 @@ import Stack from 'react-bootstrap/Stack'
 import Carousel from 'react-bootstrap/Carousel'
 import Image from 'react-bootstrap/Image'
 import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 
 // [Компьютеры и офис -> Компьютерные комплектующие -> Видеокарты] Строка с хлебными крошками для навигации
@@ -162,30 +163,32 @@ const ItemViewer = () => {
 
   return (
     <Row>
-      <Stack className="bg-dark" direction="horizontal" gap={2}>
-        <div className="bg-dark ">
-          {activeBreadcrumb()}
-          {activePic(setOnSelectSlide)}
-        </div>
-        <div className="bg-dark">
-          <Stack gap={4}>
-            <span style={{ color: 'rgb(255,255,255)', paddingLeft: '0' }}>
-              <div className="bg-dark">Название:{itemShop.title}</div>
-              <div className="bg-dark">Рейтинг:&nbsp;{renderRating(itemShop.rating)}</div>
-              <div className="bg-dark">Кол-во (заказов): {itemShop.cost * 5} /&nbsp;шт</div>
-              <div className="bg-dark">Цена: {itemShop.cost}&nbsp;тг</div>
-              <div className="bg-dark">Описание: {itemShop.description}</div>
-              <Stack direction="horizontal" gap={2}>
-                <label>Кол-во: </label>
-                <input className="mr-auto" type="number" id="typeNumber" placeholder="0" style={{ width: '3em' }} />
-                <Button variant="outline-success dark" className="bi bi-cart-plus">
-                  В корзину
-                </Button>
-              </Stack>
-            </span>
-          </Stack>
-        </div>
-      </Stack>
+      <Col>
+{/*         <Stack className="bg-dark" direction="horizontal" gap={2}>
+          <div className="bg-dark "> */}
+            {activeBreadcrumb()}
+            {activePic(setOnSelectSlide)}
+{/*           </div>
+          <div className="bg-dark">
+            <Stack gap={4}>
+              <span style={{ color: 'rgb(255,255,255)', paddingLeft: '0' }}>
+                <div className="bg-dark">Название:{itemShop.title}</div>
+                <div className="bg-dark">Рейтинг:&nbsp;{renderRating(itemShop.rating)}</div>
+                <div className="bg-dark">Кол-во (заказов): {itemShop.cost * 5} /&nbsp;шт</div>
+                <div className="bg-dark">Цена: {itemShop.cost}&nbsp;тг</div>
+                <div className="bg-dark">Описание: {itemShop.description}</div>
+                <Stack direction="horizontal" gap={2}>
+                  <label>Кол-во: </label>
+                  <input className="mr-auto" type="number" id="typeNumber" placeholder="0" style={{ width: '3em' }} />
+                  <Button variant="outline-success dark" className="bi bi-cart-plus">
+                    В корзину
+                  </Button>
+                </Stack>
+              </span>
+            </Stack>
+          </div>
+        </Stack> */}
+      </Col>
     </Row>
   )
 }
