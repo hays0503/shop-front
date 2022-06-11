@@ -4,18 +4,20 @@
     // Для получения дополнительной информации посетите: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [ 
+        
+
         {            
             "command": "react-scripts start",
             "name": "Run",
             "request": "launch",
             "type": "node-terminal"
         },       
-                        {
-                            "command": "npm start",
-                            "name": "Run npm start",
-                            "request": "launch",
-                            "type": "node-terminal"
-                        }
+        {
+            "command": "npm start",
+            "name": "Run npm start",
+            "request": "launch",
+            "type": "node-terminal"
+        }
 
 
     ]
