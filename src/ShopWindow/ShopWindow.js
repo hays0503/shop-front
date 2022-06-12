@@ -12,82 +12,73 @@ const itemShop = [
     idItem: 1,
     title: 'lorem',
     description: 'Esse id exercitation exercitation ad laborum enim non Lorem culpa.',
-    cost: 125,
+    cost: 125000000,
     rating: 1,
-    image:
-      'https://sun2.beeline-kz.userapi.com/s/v1/ig2/mhwizBfxVaE-B9IldHcoKmrTmrRIVUTwmLd80tFFy3NVOBOZxsNx4uDuyA5jpcl-TvzriEjzuvNZxdX4ir0y0VJR.jpg?size=1003x1080&quality=96&type=album'
+    image: 'https://via.placeholder.com/600/92c952'
   },
   {
     idItem: 2,
     title: 'lorem',
     description: 'Esse id exercitation exercitation ad laborum enim non Lorem culpa.',
-    cost: 125,
+    cost: 125000000,
     rating: 2,
-    image:
-      'https://sun9-14.userapi.com/s/v1/ig2/DdTVI4vMXinStZBHE8GPPR8jLyBxKLR6UX2XAFMdjLYJYPLsCf4n6aL7UQpIqalHoWh-tzteGSUS7rGRGUADPnd_.jpg?size=762x1080&quality=96&type=album'
+    image: 'https://via.placeholder.com/600/92c952'
   },
   {
     idItem: 3,
     title: 'lorem',
     description: 'Esse id exercitation exercitation ad laborum enim non Lorem culpa.',
-    cost: 125,
+    cost: 125000000,
     rating: 3,
-    image:
-      'https://sun9-34.userapi.com/s/v1/ig2/rR6KWfB8LewMLFtolPxBPZFvSB1-iyr3agEuUelTJF4Lwg5vXXMyUeLji9V4jR67db9GVFbHeMzy-xd5qxyjDX07.jpg?size=807x1080&quality=96&type=album'
+    image: 'https://via.placeholder.com/600/92c952'
   },
   {
     idItem: 4,
     title: 'lorem',
     description: 'Esse id exercitation exercitation ad laborum enim non Lorem culpa.',
-    cost: 125,
+    cost: 125000000,
     rating: 4,
-    image:
-      'https://sun9-12.userapi.com/s/v1/ig2/mCnLlDqCP9X5gPGOGNqNLrH8ePv7tMUP3zxgZ-BkwlIOAAB1raDgugg_qFwrhCEG-Z51sDY-NqIlt5tzAulPunRC.jpg?size=1280x1047&quality=96&type=album'
+    image: 'https://via.placeholder.com/600/92c952'
   },
   {
     idItem: 5,
     title: 'lorem',
     description: 'Esse id exercitation exercitation ad laborum enim non Lorem culpa.',
-    cost: 125,
+    cost: 125000000,
     rating: 5,
-    image:
-      'https://sun9-65.userapi.com/s/v1/ig2/UscZAoAqA-CiTVPYEHjx_wx_siDYAoQri55F1Zyklue92lUYZiWcOZB2wT-5nQHD_GDjIvykTNtBqk2xEg4VB6bu.jpg?size=728x1080&quality=96&type=album'
+    image: 'https://via.placeholder.com/600/92c952'
   },
   {
     idItem: 6,
     title: 'lorem',
     description: 'Esse id exercitation exercitation ad laborum enim non Lorem culpa.',
-    cost: 125,
+    cost: 125000000,
     rating: 1,
-    image:
-      'https://sun2.beeline-kz.userapi.com/s/v1/ig2/mhwizBfxVaE-B9IldHcoKmrTmrRIVUTwmLd80tFFy3NVOBOZxsNx4uDuyA5jpcl-TvzriEjzuvNZxdX4ir0y0VJR.jpg?size=1003x1080&quality=96&type=album'
+    image: 'https://via.placeholder.com/600/92c952'
   },
   {
     idItem: 7,
     title: 'lorem',
     description: 'Esse id exercitation exercitation ad laborum enim non Lorem culpa.',
-    cost: 125,
+    cost: 125000000,
     rating: 2,
-    image:
-      'https://sun9-14.userapi.com/s/v1/ig2/DdTVI4vMXinStZBHE8GPPR8jLyBxKLR6UX2XAFMdjLYJYPLsCf4n6aL7UQpIqalHoWh-tzteGSUS7rGRGUADPnd_.jpg?size=762x1080&quality=96&type=album'
+    image: 'https://via.placeholder.com/600/92c952'
   },
   {
     idItem: 8,
     title: 'lorem',
     description: 'Esse id exercitation exercitation ad laborum enim non Lorem culpa.',
-    cost: 125,
+    cost: 125000000,
     rating: 3,
-    image:
-      'https://sun9-34.userapi.com/s/v1/ig2/rR6KWfB8LewMLFtolPxBPZFvSB1-iyr3agEuUelTJF4Lwg5vXXMyUeLji9V4jR67db9GVFbHeMzy-xd5qxyjDX07.jpg?size=807x1080&quality=96&type=album'
+    image: 'https://via.placeholder.com/600/92c952'
   },
   {
     idItem: 9,
     title: 'lorem',
     description: 'Esse id exercitation exercitation ad laborum enim non Lorem culpa.',
-    cost: 125,
+    cost: 125000000,
     rating: 4,
-    image:
-      'https://sun9-12.userapi.com/s/v1/ig2/mCnLlDqCP9X5gPGOGNqNLrH8ePv7tMUP3zxgZ-BkwlIOAAB1raDgugg_qFwrhCEG-Z51sDY-NqIlt5tzAulPunRC.jpg?size=1280x1047&quality=96&type=album'
+    image: 'https://via.placeholder.com/600/92c952'
   }
 ]
 
@@ -106,7 +97,7 @@ export default class ShopWindow extends Component {
     switch (star) {
       case 5:
         return (
-          <div style={{ fontSize: '0.9rem' }}>
+          <div style={{ fontSize: '1rem', color: 'rgb(255, 215, 0)' }}>
             <i className="bi bi-star-fill img-fluid" />
             <i className="bi bi-star-fill img-fluid" />
             <i className="bi bi-star-fill img-fluid" />
@@ -116,7 +107,7 @@ export default class ShopWindow extends Component {
         )
       case 4:
         return (
-          <div style={{ fontSize: '0.9rem' }}>
+          <div style={{ fontSize: '1rem', color: 'rgb(255, 215, 0)' }}>
             <i className="bi bi-star-fill" />
             <i className="bi bi-star-fill" />
             <i className="bi bi-star-fill" />
@@ -126,7 +117,7 @@ export default class ShopWindow extends Component {
         )
       case 3:
         return (
-          <div style={{ fontSize: '0.9rem' }}>
+          <div style={{ fontSize: '1rem', color: 'rgb(255, 215, 0)' }}>
             <i className="bi bi-star-fill" />
             <i className="bi bi-star-fill" />
             <i className="bi bi-star-fill" />
@@ -136,7 +127,7 @@ export default class ShopWindow extends Component {
         )
       case 2:
         return (
-          <div style={{ fontSize: '0.9rem' }}>
+          <div style={{ fontSize: '1rem', color: 'rgb(255, 215, 0)' }}>
             <i className="bi bi-star-fill" />
             <i className="bi bi-star-fill" />
             <i className="bi bi-star" />
@@ -146,23 +137,23 @@ export default class ShopWindow extends Component {
         )
       case 1:
         return (
-          <div style={{ fontSize: '0.9rem' }}>
+          <span style={{ fontSize: '1rem', color: 'rgb(255, 215, 0)' }}>
             <i className="bi bi-star-fill" />
             <i className="bi bi-star" />
             <i className="bi bi-star" />
             <i className="bi bi-star" />
             <i className="bi bi-star" />
-          </div>
+          </span>
         )
       case 0:
         return (
-          <div style={{ fontSize: '0.9rem' }}>
+          <span style={{ fontSize: '1rem', color: 'rgb(255, 215, 0)' }}>
             <i className="bi bi-star" />
             <i className="bi bi-star" />
             <i className="bi bi-star" />
             <i className="bi bi-star" />
             <i className="bi bi-star" />
-          </div>
+          </span>
         )
       default:
         return null
@@ -172,8 +163,8 @@ export default class ShopWindow extends Component {
   renderShopWindow() {
     return itemShop.map(item => {
       return (
-        <Col style={{ marginBottom: '0.2rem' }} key={item.idItem}>
-          <Card style={{ width: '16rem', height: '38rem' }}>
+        <Col style={{ marginBottom: '0.5rem' }} key={item.idItem}>
+          <Card>
             <Card.Img
               variant="top"
               src={item.image}
@@ -186,21 +177,23 @@ export default class ShopWindow extends Component {
             <Card.Body>
               <Card.Title>{item.title}</Card.Title>
               <Card.Text>{item.description}</Card.Text>
-              <Row>
-                <Col className="col-5 text-center">
-                  {this.renderRating(item.rating)}Rating: {item.rating}
-                  /5
+              <Row style={{ margin:'5px' }}>
+                <Col style={{ padding:'5px' }} className="col">
+                  Рейтинг: {item.rating}/5
                 </Col>
-                <Col className="col">
+                <Col style={{ padding:'5px' }} className="col text-center">
+                  {this.renderRating(item.rating)}
+                </Col>
+              </Row>
+              <Row>
+                <Col  className="col">
                   <i className="bi bi-currency-dollar" />
                   {item.cost}
                 </Col>
-                <Col>
-                  <div className="col">
-                    <Button className="bi bi-cart-plus" variant="primary">
-                      Купить
-                    </Button>
-                  </div>
+                <Col className="col-6">
+                  <Button>
+                    Купить <i class="bi bi-cart4"></i>
+                  </Button>
                 </Col>
               </Row>
             </Card.Body>

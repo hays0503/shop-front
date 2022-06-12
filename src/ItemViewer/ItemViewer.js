@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
-import Stack from 'react-bootstrap/Stack'
 import Carousel from 'react-bootstrap/Carousel'
 import Image from 'react-bootstrap/Image'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Button from 'react-bootstrap/Button'
 
 // [Компьютеры и офис -> Компьютерные комплектующие -> Видеокарты] Строка с хлебными крошками для навигации
 // [.....................] Описание лота (название)
