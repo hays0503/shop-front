@@ -5,6 +5,7 @@ import Carousel from 'react-bootstrap/Carousel'
 import Image from 'react-bootstrap/Image'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Button from 'react-bootstrap/Button'
 
 // [Компьютеры и офис -> Компьютерные комплектующие -> Видеокарты] Строка с хлебными крошками для навигации
 // [.....................] Описание лота (название)
@@ -113,8 +114,9 @@ const ItemViewer = () => {
   const activePic = setOnSelectSlide => {
     return (
       <>
-        <Row className="justify-content-center" style={{ background: 'rgb(20, 25, 115)' }}>
-          <Col md="auto" style={{ background: 'rgb(123, 25, 115)' }}>
+        <Row style={{ background: 'rgb(20, 25, 115)' }}>
+          <Col></Col>
+          <Col className="col" style={{ background: 'rgb(123, 25, 115)' }}>
             <Carousel fade indicators={false} activeIndex={onSelectSlide}>
               <Carousel.Item>
                 <Image
@@ -140,31 +142,40 @@ const ItemViewer = () => {
               </Carousel.Item>
             </Carousel>
           </Col>
+          <Col></Col>
         </Row>
-        <Row className="justify-content-center" style={{ background: 'rgb(20, 25, 115)' }}>
-          <Col md="auto" style={{ background: 'rgb(123, 132, 115)' }}>
-            <Image
-              thumbnail
-              style={{ width: '5rem', height: '5rem', objectFit: 'scale-down' }}
-              src={itemShop.image[0]}
-              alt="First slide"
-              onClick={() => setOnSelectSlide(0)}
-            />
-            <Image
-              thumbnail
-              style={{ width: '5rem', height: '5rem', objectFit: 'scale-down' }}
-              src={itemShop.image[1]}
-              alt="Second slide"
-              onClick={() => setOnSelectSlide(1)}
-            />
-            <Image
-              thumbnail
-              style={{ width: '5rem', height: '5rem', objectFit: 'scale-down' }}
-              src={itemShop.image[2]}
-              alt="Third slide"
-              onClick={() => setOnSelectSlide(2)}
-            />
+        <Row style={{ background: 'rgb(20, 25, 115)' }}>
+          <Col></Col>
+          <Col className="col" style={{ background: 'rgb(123, 132, 115)' }}>
+            <Row>
+              <Col className="col-1"></Col>
+              <Col>
+                <Image
+                  thumbnail
+                  style={{ width: '5rem', height: '5rem', objectFit: 'scale-down' }}
+                  src={itemShop.image[0]}
+                  alt="First slide"
+                  onClick={() => setOnSelectSlide(0)}
+                />
+                <Image
+                  thumbnail
+                  style={{ width: '5rem', height: '5rem', objectFit: 'scale-down' }}
+                  src={itemShop.image[1]}
+                  alt="Second slide"
+                  onClick={() => setOnSelectSlide(1)}
+                />
+                <Image
+                  thumbnail
+                  style={{ width: '5rem', height: '5rem', objectFit: 'scale-down' }}
+                  src={itemShop.image[2]}
+                  alt="Third slide"
+                  onClick={() => setOnSelectSlide(2)}
+                />
+              </Col>
+              <Col className="col-1"></Col>
+            </Row>
           </Col>
+          <Col></Col>
         </Row>
       </>
     )
@@ -173,28 +184,22 @@ const ItemViewer = () => {
   return (
     <Row>
       <Col>
-        {/*         <Stack className="bg-dark" direction="horizontal" gap={2}>
-          <div className="bg-dark "> */}
         {activeBreadcrumb()}
         {activePic(setOnSelectSlide)}
-        <div className="bg-dark">
-          <Stack gap={4}>
-            <span style={{ color: 'rgb(255,255,255)', paddingLeft: '0' }}>
-              <div className="bg-dark">Название:{itemShop.title}</div>
-              <div className="bg-dark">Рейтинг:&nbsp;{renderRating(itemShop.rating)}</div>
-              <div className="bg-dark">Кол-во (заказов): {itemShop.cost * 5} /&nbsp;шт</div>
-              <div className="bg-dark">Цена: {itemShop.cost}&nbsp;тг</div>
-              <div className="bg-dark">Описание: {itemShop.description}</div>
-              <Stack direction="horizontal" gap={2}>
-                <label>Кол-во: </label>
-                <input className="mr-auto" type="number" id="typeNumber" placeholder="0" style={{ width: '3em' }} />
-                <Button variant="outline-success dark" className="bi bi-cart-plus">
-                  В корзину
-                </Button>
-              </Stack>
-            </span>
-          </Stack>
-        </div>
+      </Col>
+      <Col className="bg-dark align-self-center">
+        <span className="bg-dark" style={{ color: 'rgb(255,255,255)', paddingLeft: '0' }}>
+          <div className="bg-dark">Название:{itemShop.title}</div>
+          <div className="bg-dark">Рейтинг:&nbsp;{renderRating(itemShop.rating)}</div>
+          <div className="bg-dark">Кол-во (заказов): {itemShop.cost * 5} /&nbsp;шт</div>
+          <div className="bg-dark">Цена: {itemShop.cost}&nbsp;тг</div>
+          <div className="bg-dark">Описание: {itemShop.description}</div>
+          <label>Кол-во: </label>
+          <input className="mr-auto" type="number" id="typeNumber" placeholder="0" style={{ width: '3em' }} />
+          <Button variant="outline-success dark" className="bi bi-cart-plus">
+            В корзину
+          </Button>
+        </span>
       </Col>
     </Row>
   )
