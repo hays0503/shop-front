@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Stack from 'react-bootstrap/Stack'
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
 import Carousel from 'react-bootstrap/Carousel'
 import Image from 'react-bootstrap/Image'
@@ -111,81 +112,89 @@ const ItemViewer = () => {
 
   const activePic = setOnSelectSlide => {
     return (
-      <div>
-        <Carousel fade indicators={false} activeIndex={onSelectSlide}>
-          <Carousel.Item>
+      <>
+        <Row className="justify-content-center" style={{ background: 'rgb(20, 25, 115)' }}>
+          <Col md="auto" style={{ background: 'rgb(123, 25, 115)' }}>
+            <Carousel fade indicators={false} activeIndex={onSelectSlide}>
+              <Carousel.Item>
+                <Image
+                  thumbnail
+                  style={{ width: '30rem', height: '30rem', objectFit: 'scale-down' }}
+                  src={itemShop.image[0]}
+                  alt="First slide"
+                />
+              </Carousel.Item>
+              <Carousel.Item>
+                <Image
+                  style={{ width: '30rem', height: '30rem', objectFit: 'scale-down' }}
+                  src={itemShop.image[1]}
+                  alt="Second slide"
+                />
+              </Carousel.Item>
+              <Carousel.Item>
+                <Image
+                  style={{ width: '30rem', height: '30rem', objectFit: 'scale-down' }}
+                  src={itemShop.image[2]}
+                  alt="Third slide"
+                />
+              </Carousel.Item>
+            </Carousel>
+          </Col>
+        </Row>
+        <Row className="justify-content-center" style={{ background: 'rgb(20, 25, 115)' }}>
+          <Col md="auto" style={{ background: 'rgb(123, 132, 115)' }}>
             <Image
-              style={{ width: '30rem', height: '30rem', objectFit: 'scale-down' }}
+              thumbnail
+              style={{ width: '5rem', height: '5rem', objectFit: 'scale-down' }}
               src={itemShop.image[0]}
               alt="First slide"
+              onClick={() => setOnSelectSlide(0)}
             />
-          </Carousel.Item>
-          <Carousel.Item>
             <Image
-              style={{ width: '30rem', height: '30rem', objectFit: 'scale-down' }}
+              thumbnail
+              style={{ width: '5rem', height: '5rem', objectFit: 'scale-down' }}
               src={itemShop.image[1]}
               alt="Second slide"
+              onClick={() => setOnSelectSlide(1)}
             />
-          </Carousel.Item>
-          <Carousel.Item>
             <Image
-              style={{ width: '30rem', height: '30rem', objectFit: 'scale-down' }}
+              thumbnail
+              style={{ width: '5rem', height: '5rem', objectFit: 'scale-down' }}
               src={itemShop.image[2]}
               alt="Third slide"
+              onClick={() => setOnSelectSlide(2)}
             />
-          </Carousel.Item>
-        </Carousel>
-        <div className="d-flex justify-content-md-center">
-          <Image
-            style={{ width: '5rem', height: '5rem', objectFit: 'scale-down' }}
-            src={itemShop.image[0]}
-            alt="First slide"
-            onClick={() => setOnSelectSlide(0)}
-          />
-          <Image
-            style={{ width: '5rem', height: '5rem', objectFit: 'scale-down' }}
-            src={itemShop.image[1]}
-            alt="Second slide"
-            onClick={() => setOnSelectSlide(1)}
-          />
-          <Image
-            style={{ width: '5rem', height: '5rem', objectFit: 'scale-down' }}
-            src={itemShop.image[2]}
-            alt="Third slide"
-            onClick={() => setOnSelectSlide(2)}
-          />
-        </div>
-      </div>
+          </Col>
+        </Row>
+      </>
     )
   }
 
   return (
     <Row>
       <Col>
-{/*         <Stack className="bg-dark" direction="horizontal" gap={2}>
+        {/*         <Stack className="bg-dark" direction="horizontal" gap={2}>
           <div className="bg-dark "> */}
-            {activeBreadcrumb()}
-            {activePic(setOnSelectSlide)}
-{/*           </div>
-          <div className="bg-dark">
-            <Stack gap={4}>
-              <span style={{ color: 'rgb(255,255,255)', paddingLeft: '0' }}>
-                <div className="bg-dark">Название:{itemShop.title}</div>
-                <div className="bg-dark">Рейтинг:&nbsp;{renderRating(itemShop.rating)}</div>
-                <div className="bg-dark">Кол-во (заказов): {itemShop.cost * 5} /&nbsp;шт</div>
-                <div className="bg-dark">Цена: {itemShop.cost}&nbsp;тг</div>
-                <div className="bg-dark">Описание: {itemShop.description}</div>
-                <Stack direction="horizontal" gap={2}>
-                  <label>Кол-во: </label>
-                  <input className="mr-auto" type="number" id="typeNumber" placeholder="0" style={{ width: '3em' }} />
-                  <Button variant="outline-success dark" className="bi bi-cart-plus">
-                    В корзину
-                  </Button>
-                </Stack>
-              </span>
-            </Stack>
-          </div>
-        </Stack> */}
+        {activeBreadcrumb()}
+        {activePic(setOnSelectSlide)}
+        <div className="bg-dark">
+          <Stack gap={4}>
+            <span style={{ color: 'rgb(255,255,255)', paddingLeft: '0' }}>
+              <div className="bg-dark">Название:{itemShop.title}</div>
+              <div className="bg-dark">Рейтинг:&nbsp;{renderRating(itemShop.rating)}</div>
+              <div className="bg-dark">Кол-во (заказов): {itemShop.cost * 5} /&nbsp;шт</div>
+              <div className="bg-dark">Цена: {itemShop.cost}&nbsp;тг</div>
+              <div className="bg-dark">Описание: {itemShop.description}</div>
+              <Stack direction="horizontal" gap={2}>
+                <label>Кол-во: </label>
+                <input className="mr-auto" type="number" id="typeNumber" placeholder="0" style={{ width: '3em' }} />
+                <Button variant="outline-success dark" className="bi bi-cart-plus">
+                  В корзину
+                </Button>
+              </Stack>
+            </span>
+          </Stack>
+        </div>
       </Col>
     </Row>
   )

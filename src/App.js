@@ -32,8 +32,8 @@ function App() {
               </Col>
             ) : null}
             <Col className="col">
-              {/*<ItemViewer style={{ zIndex: 0 }} />*/}
-               <ShopWindow /> 
+              <ItemViewer style={{ zIndex: 0 }} />
+              {/* <ShopWindow /> */}
             </Col>
           </Row>
         </Container></ThemeProvider>
