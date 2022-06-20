@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Stack from 'react-bootstrap/Stack'
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
 import Carousel from 'react-bootstrap/Carousel'
 import Image from 'react-bootstrap/Image'
@@ -117,7 +116,7 @@ const ItemViewer = () => {
         <Row style={{ background: 'rgb(20, 25, 115)' }}>
           <Col></Col>
           <Col className="col" style={{ background: 'rgb(123, 25, 115)' }}>
-            <Carousel fade indicators={false} activeIndex={onSelectSlide}>
+            <Carousel fade controls={false} indicators={false} activeIndex={onSelectSlide}>
               <Carousel.Item>
                 <Image
                   thumbnail
@@ -144,12 +143,8 @@ const ItemViewer = () => {
           </Col>
           <Col></Col>
         </Row>
-        <Row style={{ background: 'rgb(20, 25, 115)' }}>
-          <Col></Col>
-          <Col className="col" style={{ background: 'rgb(123, 132, 115)' }}>
-            <Row>
-              <Col className="col-1"></Col>
-              <Col>
+        <Row className='justify-content-md-center' style={{background: 'rgb(20, 25, 115)' }}>          
+              <Col md="auto" style={{ background: 'rgb(12, 155, 235)' }}>
                 <Image
                   thumbnail
                   style={{ width: '5rem', height: '5rem', objectFit: 'scale-down' }}
@@ -172,17 +167,13 @@ const ItemViewer = () => {
                   onClick={() => setOnSelectSlide(2)}
                 />
               </Col>
-              <Col className="col-1"></Col>
-            </Row>
-          </Col>
-          <Col></Col>
         </Row>
       </>
     )
   }
 
   return (
-    <Row>
+    <Row >
       <Col>
         {activeBreadcrumb()}
         {activePic(setOnSelectSlide)}

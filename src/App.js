@@ -1,14 +1,16 @@
 import './App.css'
 import Container from 'react-bootstrap/Container'
-// import RegistrationForm from './RegistrationForm/Reg'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import ShopWindow from './ShopWindow/ShopWindow'
+//import ShopWindow from './ShopWindow/ShopWindow'
 import NavigationBar from './NavigarionBar/NavigationBar'
 import Categories from './CategoriesBar/CategoriesBar'
 import ItemViewer from './ItemViewer/ItemViewer'
 import ThemeProvider from 'react-bootstrap/ThemeProvider'
 import React, { useState } from 'react'
+
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
 function App() {
   const [isShowCategories, setShowCategories] = useState(false)
@@ -22,10 +24,10 @@ function App() {
       <ThemeProvider breakpoints={['xxxl', 'xxl', 'xl', 'lg', 'md', 'sm', 'xs', 'xxs']}>
         <Container fluid>
           
-          <Row>
+          <Row className="bg-dark ">
             <NavigationBar handleShowCategories={toggleShowCategories} />
           </Row>
-          <Row>
+          <Row className="bg-dark ">
             {isShowCategories ? (
               <Col className="col-2">
                 <Categories />
